@@ -7,11 +7,11 @@
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	
     <!-- https://vuejs.org/v2/guide/#Getting-Started -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
   <body>
 
     <!-- https://vuejs.org/v2/guide/index.html -->
@@ -26,6 +26,20 @@
                - Display its "value" property in italic style
       -->
 
+		 <h1>{{ d.collection.title }}</h1>
+			<div>
+				{{ d.collection.type }} {{ d.collection.version }}
+			</div>
+			<div  class="card" v-for="todo in d.collection.items">
+				<div class="card-body">
+				<ul>
+					<li v-for="datos in todo.data">
+					<span style="font-weight:bold">{{ datos.prompt }} </span><span style="font-weight:italic">{{ datos.value }} </span>
+					</li>
+				</ul>
+					<a class="card-link" v-bind:href="todo.href">	Ver en wikipedia </a>
+				</div>
+			</div>		
     </div>
 
     <script src="js/script.js"></script>
