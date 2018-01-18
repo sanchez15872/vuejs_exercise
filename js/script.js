@@ -25,7 +25,7 @@ var server_data = {
 			  {name : "description", value : "The Hunger Games film series consists of four science fiction dystopian adventure films based on The Hunger Games trilogy of novels, by the American author Suzanne Collins. Distributed by Lionsgate and produced by Nina Jacobson and Jon Kilik, it stars Jennifer Lawrence as Katniss Everdeen, Josh Hutcherson as Peeta Mellark, Woody Harrelson as Haymitch Abernathy, Elizabeth Banks as Effie Trinket, Philip Seymour Hoffman as Plutarch Heavensbee, Stanley Tucci as Caesar Flickerman, Donald Sutherland as President Snow, and Liam Hemsworth as Gale Hawthorne. Gary Ross directed the first film, while Francis Lawrence directed the next three films.", prompt : "Description"},
 		      {name : "director", value : "Gary Ross", prompt : "Director"},
 		      {name : "datePublished", value : "2012-03-12", prompt : "Release Date"},
-			  {name : "image", value : "https://resizing.flixster.com/v_-1rbAxQUJfpmJFZbXunLzQk2I=/180x240/v1.bTsxMTIwMjk1MTtqOzE3NjM0OzEyMDA7Mzc1MDs1NzAw", prompt : "image of the movie"}
+			  {name : "image", value : "https://images-na.ssl-images-amazon.com/images/M/MV5BNjQzNDI2NTU1Ml5BMl5BanBnXkFtZTgwNTAyMDQ5NjE@._V1_UX182_CR0,0,182,268_AL_.jpg", prompt : "image of the movie"}
         ]
 	    },
 	    {
@@ -35,7 +35,7 @@ var server_data = {
 			  {name : "description", value : "Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones. It is filmed in Belfast and elsewhere in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, Spain, and the United States. The series premiered on HBO in the United States on April 17, 2011, and its seventh season ended on August 27, 2017. The series will conclude with its eighth season premiering in 2019.", prompt : "Description"},
 		      {name : "director", value : "Alan Taylor et al", prompt : "Director"},
 		      {name : "datePublished", value : "2011-04-17", prompt : "Release Date"},
-			  {name : "image", value : "http://odishasuntimes.com/wp-content/uploads/2017/07/GOT.jpg", prompt : "image of the movie"}
+			  {name : "image", value : "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3NTQ1NDg1Ml5BMl5BanBnXkFtZTgwNzY2NDA0MjI@._V1_UX182_CR0,0,182,268_AL_.jpg", prompt : "image of the movie"}
         ]
 	    }
     ]
