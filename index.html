@@ -15,7 +15,7 @@
   <body>
 
     <!-- https://vuejs.org/v2/guide/index.html -->
-    <div id="app">
+    <div class="container" id="app">
       <!--
            TODO Show collection data. See js/script.js
            - Show collection Title
@@ -30,18 +30,20 @@
 			<div>
 				{{ d.collection.type }} {{ d.collection.version }}
 			</div>
-			<div  class="card" v-for="todo in d.collection.items">
+			<div class="row" id="itemlist">
+			<div  class="card col-md-4" v-for="todo in d.collection.items">
 				<div class="card-body">
-				<ul>
-					<li v-for="datos in todo.data">
-					<span style="font-weight:bold">{{ datos.prompt }} </span><span style="font-weight:italic">{{ datos.value }} </span>
-					</li>
-				</ul>
-					<a class="card-link" v-bind:href="todo.href">	Ver en wikipedia </a>
+					<h5 class="card-title" v-for="elemento in todo.data" v-if="elemento.name=='name'">{{ elemento.value }}</h5>	
+					<ul>
+						<li v-for="datos in todo.data" v-if="datos.name!= 'name'">
+						<span style="font-weight:bold">{{ datos.prompt }} </span><span style="font-weight:italic">{{ datos.value }} </span>
+						</li>
+					</ul>
+						<a class="card-link" v-bind:href="todo.href">	Ver en wikipedia </a>
 				</div>
 			</div>		
-    </div>
-
+		</div>
+		</div>
     <script src="js/script.js"></script>
   </body>
 
