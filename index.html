@@ -32,10 +32,13 @@
 			</div>
 			<div class="row" id="itemlist">
 			<div  class="card col-md-4" v-for="todo in d.collection.items">
+			
+				<img class="card-img-top"  alt="Movie image" v-for="imagen in todo.data" v-if="imagen.name=='image'" v-bind:src="imagen.value">
+				
 				<div class="card-body">
 					<h5 class="card-title" v-for="elemento in todo.data" v-if="elemento.name=='name'">{{ elemento.value }}</h5>	
 					<ul>
-						<li v-for="datos in todo.data" v-if="datos.name!= 'name'">
+						<li v-for="datos in todo.data" v-if="datos.name!= 'name' && datos.name!= 'image' ">
 						<span style="font-weight:bold">{{ datos.prompt }} </span><span style="font-weight:italic">{{ datos.value }} </span>
 						</li>
 					</ul>
