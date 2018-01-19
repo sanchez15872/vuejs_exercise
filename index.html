@@ -31,18 +31,20 @@
 				{{ d.collection.type }} {{ d.collection.version }}
 			</div>
 			<div class="row" id="itemlist">
-			<div  class="card col-md-4" v-for="todo in d.collection.items">
+			<div  class="card col-md-4" v-for="item in d.collection.items">
 			
-				<img class="card-img-top"  alt="Movie image" v-for="imagen in todo.data" v-if="imagen.name=='image'" v-bind:src="imagen.value">
+				<img class="card-img-top"  alt="Movie image" v-bind:src="damepropiedad(item, 'image')">
 				
 				<div class="card-body">
-					<h5 class="card-title" v-for="elemento in todo.data" v-if="elemento.name=='name'">{{ elemento.value }}</h5>	
+					<h5 class="card-title">{{ damepropiedad(item, 'name') }}</h5>	
+					
+					<button class="btn-primary btn-block" v-on:click="buttonclick">Show</button>
 					<ul>
-						<li v-for="datos in todo.data" v-if="datos.name!= 'name' && datos.name!= 'image' ">
+						<li v-for="datos in item.data" v-if="datos.name!= 'name' && datos.name!= 'image' ">
 						<span style="font-weight:bold">{{ datos.prompt }} </span><span style="font-weight:italic">{{ datos.value }} </span>
 						</li>
 					</ul>
-						<a class="card-link" v-bind:href="todo.href">	Ver en wikipedia </a>
+						<a class="card-link" v-bind:href="item.href">	Ver en wikipedia </a>
 				</div>
 			</div>		
 		</div>
